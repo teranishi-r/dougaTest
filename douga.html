@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="yt-guard">
+    	<video id="player" width="400" src="sample.mp4" ></video>
+    </div>
+    <div id="playbtn" onclick="play()">
+    再生
+    </div>
+    <script>
+    function play(){
+    	var video = document.getElementById("player");
+    	if(video.paused){
+    		video.play();
+    	}else{
+    		video.pause();
+    	}
+    }
+    </script>
+  </body>
+</html>
