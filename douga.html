@@ -2,7 +2,10 @@
 <html>
   <body>
     <div class="yt-guard">
-    	<video id="player" width="400" src="sample.mp4" ></video>
+    	<video id="player" src="sample.mp4"
+        playsinline 
+        webkit-playinline
+        disablePictureInPicture></video>
     </div>
     <div id="playbtn" onclick="play()">
     再生
@@ -17,5 +20,9 @@
     	}
     }
     </script>
+    <style>
+      player {
+        width: 100%;
+    </style>
   </body>
 </html>
