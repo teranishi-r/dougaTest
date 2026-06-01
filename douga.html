@@ -10,6 +10,9 @@
     <div id="playbtn" onclick="play()">
     再生
     </div>
+    <div id="playend" style="display='none'">
+    再生完了
+    </div>
     <script>
     function play(){
     	var video = document.getElementById("player");
@@ -19,11 +22,21 @@
     		video.pause();
     	}
     }
+
+      document.getElementById("player").addEventListener("ended", function(){
+        document.getElementById("playend").style.display='inline';
+      });
     </script>
     <style>
       #player {
         width: 100vw;
         height: 100dvh;
+      }
+      #playbtn {
+        background-color: brown;
+      }
+       #playend {
+        background-color: red;
       }
     </style>
   </body>
